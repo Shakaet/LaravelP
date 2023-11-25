@@ -106,6 +106,10 @@ Route::fallback(function(){
     return "<h1>Page didnt Found</h1>";
 });
 
+Route::get('/practicee', function () {
+    return view('practicefile');
+})->name('practice');
+
 
     
 
