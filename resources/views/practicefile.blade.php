@@ -5,7 +5,7 @@
 
 // $msg="Hello World";
 
-$msg=["abc,def"];
+$msg=["shakaet","akib","minhaz"];
 
 
 @endphp
@@ -14,7 +14,15 @@ $msg=["abc,def"];
 
 @foreach ($msg as $i)
 
-<li><p>{{$i}}</p></li>
+   @if($loop->odd)
+{{-- <p style="color:blue">{{$i}}</p> --}}
+    <p style="color:blue">{{$loop->iteration}}- {{$i}}</p>
+   @else
+{{-- <p style="color:red">{{$i}}</p> --}}
+    <p style="color:red">{{$loop->iteration}}- {{$i}}</p>
+   @endif
+
+{{-- <li><p> {{$i}}</p></li> --}}
     
 @endforeach
 </ul>
