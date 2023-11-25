@@ -1,3 +1,4 @@
+@include('header',['info'=>'Home file'])
 <!DOCTYPE html>
 <html lang="en">
 <head>

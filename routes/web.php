@@ -111,6 +111,12 @@ Route::get('/practicee', function () {
 })->name('practice');
 
 
+Route::get('/content', function () {
+    return view('content');
+})->name('content');
+
+
+
     
 
   

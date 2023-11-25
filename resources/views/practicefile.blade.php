@@ -1,3 +1,18 @@
+{{-- @include('header',['info'=>$msg2]) --}}
+
+@php
+
+
+// $msg="Hello World";
+
+$msg2=["abc,def"];
+
+@endphp
+
+@include('header',['info'=>$msg2])
+
+<br>
+
 {{"Welcome"}}
 <br>
 
@@ -5,7 +20,7 @@
 
 // $msg="Hello World";
 
-$msg=["shakaet","akib","minhaz"];
+$msg=["abc,def"];
 
 
 @endphp
@@ -14,15 +29,16 @@ $msg=["shakaet","akib","minhaz"];
 
 @foreach ($msg as $i)
 
-   @if($loop->odd)
+@if($loop->odd)
 {{-- <p style="color:blue">{{$i}}</p> --}}
-    <p style="color:blue">{{$loop->iteration}}- {{$i}}</p>
-   @else
+<p style="color:blue">{{$loop->iteration}}- {{$i}}</p>
+    
+@else
 {{-- <p style="color:red">{{$i}}</p> --}}
-    <p style="color:red">{{$loop->iteration}}- {{$i}}</p>
-   @endif
+<p style="color:">{{$loop->iteration}}- {{$i}}</p>
+@endif
 
-{{-- <li><p> {{$i}}</p></li> --}}
+<li><p> {{$i}}</p></li>
     
 @endforeach
 </ul>
