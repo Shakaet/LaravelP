@@ -40,6 +40,8 @@
 
 @includeWhen(empty($infos),'footer')
 
+@include('footer',['infos'=>'footer section'])
+
 
 
 

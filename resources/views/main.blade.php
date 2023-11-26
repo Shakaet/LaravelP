@@ -7,6 +7,16 @@
     <title>Document</title>
 </head>
 <body>
+
+    <div>
+        @yield('title')
+    </div>
+    
+
+
+    <div>
+        @yield('header')
+    </div>
     
     <div>
         @yield('content')
