@@ -112,8 +112,12 @@ Route::get('/practicee', function () {
 
 
 Route::get('/content', function () {
-    return view('content');
+    return view('contents');
 })->name('content');
+
+Route::get('/example', function () {
+    return view('example');
+})->name('example');
 
 
 

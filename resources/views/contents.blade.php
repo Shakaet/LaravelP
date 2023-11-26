@@ -15,7 +15,7 @@
 
 @section('footer')
 
-  <p>this is footer section</p>
+  <h4>this is footer section</h4>
 
 @endsection
 

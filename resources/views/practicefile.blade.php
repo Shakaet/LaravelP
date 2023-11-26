@@ -1,48 +1,51 @@
-{{-- @include('header',['info'=>$msg2]) --}}
-
 @php
-
-
-// $msg="Hello World";
-
-$msg2=["abc,def"];
-
+     $infos = ["a","b","c","d"]; 
+    // $msg = "Hello World";
 @endphp
-
-@include('header',['info'=>$msg2])
+@include('header',['info'=> $infos])
 
 <br>
-
 {{"Welcome"}}
 <br>
-
 @php
-
-// $msg="Hello World";
-
-$msg=["abc,def"];
-
-
+     $msg = ["abc","def","ert","tyu"]; 
+    // $msg = "Hello World";
 @endphp
 
 <ul>
+{{-- @foreach ($msg as $i)
+    <li>{{$i}}</li>
+@endforeach --}}
 
-@foreach ($msg as $i)
-
-@if($loop->odd)
-{{-- <p style="color:blue">{{$i}}</p> --}}
-<p style="color:blue">{{$loop->iteration}}- {{$i}}</p>
+@forelse ($msg as $i)
+    @if ($loop->odd)
+        <p style="color:blue">{{$loop->iteration}} - {{$i}}</p>
+    @else
+        <p style="color:red">{{$loop->iteration}} - {{$i}}</p>
+    @endif
     
-@else
-{{-- <p style="color:red">{{$i}}</p> --}}
-<p style="color:">{{$loop->iteration}}- {{$i}}</p>
-@endif
+@empty
+    <p>No data found</p>
+@endforelse
 
-<li><p> {{$i}}</p></li>
-    
-@endforeach
 </ul>
 {{-- {{$msg}} --}}
-<h1> welcome</h1>
 
-{!! "<h1>Welcome</h1>" !!}
+{!!"<h1>Welcome</h1>"!!}
+
+{{-- {!!"<script>alert('Welcome')</script>"!!} --}}
+
+<br>
+@includeIf('content')
+
+@includeWhen(empty($infos),'footer')
+
+
+
+
+
+
+
+
+
+

@@ -1,16 +1,10 @@
-<h1>Header Section - </h1>
+<h1>Header section</h1>
+<h2>Array elements</h2>
+<ul>
+    @forelse ($info as $i)
+        <p>{{$loop->iteration}} - {{$i}}</p>
+    @empty
+        <p>No data found</p>
+    @endforelse
 
-@foreach ($info as $item)
-
-   @if($loop->odd)
-{{-- <p style="color:blue">{{$i}}</p> --}}
-    <p style="color:blue">{{$loop->iteration}}- {{$item}}</p>
-   @else
-{{-- <p style="color:red">{{$i}}</p> --}}
-    <p style="color:red">{{$loop->iteration}}- {{$item}}</p>
-   @endif
-
-{{-- <li><p> {{$i}}</p></li> --}}
-    
-@endforeach
 </ul>
