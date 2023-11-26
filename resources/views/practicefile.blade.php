@@ -1,5 +1,5 @@
 @php
-     $infos = ["a","b","c","d"]; 
+     $infos = ["Shakaet","Akib","Riya","Anupom"]; 
     // $msg = "Hello World";
 @endphp
 @include('header',['info'=> $infos])
