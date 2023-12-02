@@ -12,6 +12,8 @@
     @foreach($msg as $val=>$k)
 
     <h2>{{$k['name']}} | {{$k['city']}}</h2>
+
+    <a href="#">Show details</a>
  
     @endforeach
         

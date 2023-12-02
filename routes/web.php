@@ -34,6 +34,16 @@ Route::get('/', function () {
     // return view('welcome')->with('msg',$msgs);
 })->name('welcome');
 
+Route::get('/user/{id}', function ($id) {
+    $users=getuser();
+    $user=$user[$id];
+    
+    
+    return view('home');
+
+
+})->name('home');
+
 Route::get('/home', function () {
     return view('skt');
 })->name('skt');
