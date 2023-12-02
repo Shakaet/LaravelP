@@ -13,10 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+function getUser()
+{
+    return $users=[
+        1=>['name'=>'AB','city'=>'ctg'],
+        2=>['name'=>'CD','city'=>'dhk'],
+        3=>['name'=>'EF','city'=>'ctg'],
+        4=>['name'=>'GH','city'=>'dhk'],
+
+    ];
+}
+
+
 Route::get('/', function () {
 
-    $msgs=["ab","cd","df"];
-    return view('welcome',['msg'=>$msgs]);
+    // $msgs=["ab","cd","df"];
+
+    $users=getuser();
+    return view('welcome',['msg'=>$users]);
     // return view('welcome')->with('msg',$msgs);
 })->name('welcome');
 

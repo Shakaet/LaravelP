@@ -9,9 +9,9 @@
     <h1> i am a shakaet</h1>
 
 
-    @foreach($msg as $item)
+    @foreach($msg as $val=>$k)
 
-    <h2>{{$item}}</h2>
+    <h2>{{$k['name']}} | {{$k['city']}}</h2>
  
     @endforeach
         
