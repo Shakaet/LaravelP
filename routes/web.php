@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome',['msg'=>'hello','name'=>'shakaet']);
 })->name('welcome');
 
 Route::get('/home', function () {
@@ -118,6 +118,11 @@ Route::get('/content', function () {
 Route::get('/example', function () {
     return view('example');
 })->name('example');
+
+Route::get('/design', function () {
+    return view('design');
+})->name('design');
+
 
 
 

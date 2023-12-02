@@ -7,6 +7,8 @@
 </head>
 <body>
     <h1> i am a shakaet</h1>
+
+    <h1> welcome page- {{$msg}}- {{$name}}</h1>
     
 </body>
 </html>
