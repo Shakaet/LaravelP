@@ -14,7 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome',['msg'=>'hello','name'=>'shakaet']);
+
+    $msgs=["ab","cd","df"];
+    return view('welcome',['msg'=>$msgs]);
+    // return view('welcome')->with('msg',$msgs);
 })->name('welcome');
 
 Route::get('/home', function () {

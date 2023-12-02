@@ -8,7 +8,18 @@
 <body>
     <h1> i am a shakaet</h1>
 
-    <h1> welcome page- {{$msg}}- {{$name}}</h1>
+
+    @foreach($msg as $item)
+
+    <h2>{{$item}}</h2>
+ 
+    @endforeach
+        
+
+
+    {{-- <h1> welcome page- {{$msg}}- {{$name}}</h1> --}}
+
+
     
 </body>
 </html>
