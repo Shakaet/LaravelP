@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -144,6 +145,15 @@ Route::get('/example', function () {
 Route::get('/design', function () {
     return view('design');
 })->name('design');
+
+// Route::get('/getview', function () {
+//     return view('design');
+// })->name('design');
+
+
+// Route::get('/getview',[StudentController::class,'getview']);
+Route::get('/',[studentController::class,'getView']);
+
 
 
 
