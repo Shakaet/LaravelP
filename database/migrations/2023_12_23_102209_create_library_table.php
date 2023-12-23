@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('students', function (Blueprint $table) {
-            //
-            $table->string('city',20)->default('no City');
-            $table->integer('contactNo')->unique();
+        Schema::create('library', function (Blueprint $table) {
+            $table->bigIncrements('lib_id');
+            $table->string('name',30);
+            $table->string('city',30);
+            $table->timestamps();
         });
     }
 
@@ -23,8 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('students', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('library');
     }
 };
